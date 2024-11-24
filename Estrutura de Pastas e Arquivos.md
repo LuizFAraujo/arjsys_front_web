@@ -15,15 +15,20 @@ SYS/
 │   │   ├── Content.tsx
 │   │   └── Footer.tsx
 │   ├── contexts/
+│   │   ├── FooterContext.tsx
+│   │   ├── SidebarConfigContext.tsx
 │   │   └── SidebarContext.tsx
 │   ├── hooks/
+│   │   ├── useFooterContext.tsx
+│   │   ├── useSidebarConfigContext.tsx
 │   │   └── useSidebarContext.tsx
 │   ├── layouts/
 │   │   ├── _partials/
 │   │   │   ├── Content.tsx
 │   │   │   ├── Footer.tsx
 │   │   │   ├── Navbar.tsx
-│   │   │   └── Sidebar.tsx
+│   │   │   ├── Sidebar.tsx
+│   │   │   └── SidebarConfig.tsx
 │   │   └── BaseLayout.tsx
 │   ├── pages/
 │   │   ├── Home.tsx
