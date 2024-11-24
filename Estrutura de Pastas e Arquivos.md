@@ -14,6 +14,10 @@ SYS/
 │   │   ├── Sidebar.tsx
 │   │   ├── Content.tsx
 │   │   └── Footer.tsx
+│   ├── contexts/
+│   │   └── SidebarContext.tsx
+│   ├── hooks/
+│   │   └── useSidebarContext.tsx
 │   ├── layouts/
 │   │   ├── _partials/
 │   │   │   ├── Content.tsx
