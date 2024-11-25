@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState } from 'react';
 
 interface FooterContextProps {
     isFooterFixed: boolean;
@@ -19,12 +19,4 @@ export const FooterProvider: React.FC<{ children: React.ReactNode }> = ({ childr
             {children}
         </FooterContext.Provider>
     );
-};
-
-export const useFooter = () => {
-    const context = useContext(FooterContext);
-    if (!context) {
-        throw new Error('useFooter deve ser usado dentro de um FooterProvider');
-    }
-    return context;
 };
