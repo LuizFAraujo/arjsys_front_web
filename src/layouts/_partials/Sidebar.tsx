@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronDown, faCompressAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom'; // Importe o Link do react-router-dom
 
 const Sidebar: React.FC = () => {
     const [openSubMenus, setOpenSubMenus] = useState<string[]>([]);
@@ -87,9 +88,9 @@ export default Sidebar;
 
 const MenuItem: React.FC<{ title: string; to?: string }> = ({ title, to }) => {
     return (
-        <a href={to || "#"} className="block px-4 py-2 text-gray-700 hover:bg-gray-200">
+        <Link to={to || "#"} className="block px-4 py-2 text-gray-700 hover:bg-gray-200">
             {title}
-        </a>
+        </Link>
     );
 };
 
