@@ -1,12 +1,79 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faSave, faFolderOpen, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const Cadastro_AlimentarEstrutura: React.FC = () => {
     return (
         <div className="flex flex-col p-4 h-full overflow-y-auto bg-gray-100">
-            <div className="text-sm text-gray-600 mb-4">Home / Engenharia / Projetos</div>
-            <div className="flex flex-col items-center justify-center flex-1 text-center">
-                <h1 className="text-4xl font-bold">Cadastro</h1>
-                <p className="text-xl text-gray-600 mt-2">Alimentar Estrutura</p>
+            <div className="text-sm text-gray-600 mb-2">Home / Engenharia / Projetos</div>
+            <hr className="border-t border-gray-300 mb-4" />
+
+            <div className="flex flex-col items-center flex-1">
+                <div className="bg-white shadow-md rounded-lg p-6 w-full">
+                    <h2 className="text-2xl font-bold mb-4">Cadastro - Alimentar Estrutura</h2>
+                    
+                    <div className="mb-4 flex items-center space-x-4">
+                        <label className="block text-gray-900 text-base font-bold mb-2">Código Item</label>
+                        <input type="text" className="shadow appearance-none border rounded w-1/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                        <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center" type="button">
+                            <FontAwesomeIcon icon={faFolderOpen} className="mr-2" />
+                            Abrir
+                        </button>
+                    </div>
+
+                    <hr className="border-t border-gray-300 mb-4" />
+
+                    <div className="mb-4 flex items-center space-x-4">
+                        <label className="block text-gray-900 text-base font-bold mb-2">Código a Incluir</label>
+                        <input type="text" className="shadow appearance-none border rounded w-1/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                        <label className="block text-gray-900 text-base font-bold mb-2">Qtde</label>
+                        <input type="text" className="shadow appearance-none border rounded w-1/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center" type="button">
+                            <FontAwesomeIcon icon={faPlus} className="mr-2" />
+                            Incluir
+                        </button>
+                    </div>
+
+                    <div className="mb-4">
+                        <label className="block text-gray-900 text-base font-bold mb-2">Componentes</label>
+                        <div className="border rounded-lg overflow-hidden">
+                            <table className="min-w-full bg-white">
+                                <thead className="bg-gray-200 text-gray-600">
+                                    <tr>
+                                        <th className="py-2 px-4 border-b">Id.</th>
+                                        <th className="py-2 px-4 border-b">Qtde</th>
+                                        <th className="py-2 px-4 border-b">Código</th>
+                                        <th className="py-2 px-4 border-b">Descrição</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {/* Adicionando 10 linhas de exemplo */}
+                                    {Array.from({ length: 10 }).map((_, index) => (
+                                        <tr key={index}>
+                                            <td className="py-2 px-4 border-b">{index + 1}</td>
+                                            <td className="py-2 px-4 border-b">10</td>
+                                            <td className="py-2 px-4 border-b">ABC123</td>
+                                            <td className="py-2 px-4 border-b">Componente Exemplo</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <hr className="border-t border-gray-300 mb-4" />
+
+                    <div className="flex justify-end space-x-4">
+                        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center" type="button">
+                            <FontAwesomeIcon icon={faTimes} className="mr-2" />
+                            Cancelar
+                        </button>
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center" type="button">
+                            <FontAwesomeIcon icon={faSave} className="mr-2" />
+                            Salvar
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     );
