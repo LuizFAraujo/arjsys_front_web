@@ -42,26 +42,26 @@ const Sidebar: React.FC = () => {
 
             {/* Menu Items */}
             <MenuItem title="Home" to="/" />
-            <MenuItem title="Dashboard" to="/EmConstrucao" />
+            <MenuItem title="Dashboard" to="/Dashboard" />
 
             {/* SubMenu Engenharia */}
             <SubMenu title="Engenharia" isOpen={openSubMenus.includes('Engenharia')} toggleSubMenu={toggleSubMenu}>
                 <SubMenu title="Projetos" isOpen={openSubMenus.includes('Projetos')} toggleSubMenu={toggleSubMenu}>
                     <SubMenu title="Cadastro" isOpen={openSubMenus.includes('Cadastro')} toggleSubMenu={toggleSubMenu}>
-                        <MenuItem title="Novo Item" to="/EmConstrucao" />
-                        <MenuItem title="Alimentar Estrutura" to="/EmConstrucao" />
+                        <MenuItem title="Novo Item" to="/Cadastro_NovoItem" />
+                        <MenuItem title="Alimentar Estrutura" to="/Cadastro_AlimentarEstrutura" />
                     </SubMenu>
                     <SubMenu title="Consulta" isOpen={openSubMenus.includes('Consulta')} toggleSubMenu={toggleSubMenu}>
-                        <MenuItem title="Estrutura" to="/EmConstrucao" />
+                        <MenuItem title="Estrutura" to="/Consulta_Estrutura" />
                     </SubMenu>
                 </SubMenu>
                 <SubMenu title="Produção" isOpen={openSubMenus.includes('Produção')} toggleSubMenu={toggleSubMenu}>
                     <SubMenu title="Cadastro" isOpen={openSubMenus.includes('Cadastro')} toggleSubMenu={toggleSubMenu}>
-                        <MenuItem title="Nova Ordem de Produção" to="/EmConstrucao" />
+                        <MenuItem title="Nova Ordem de Produção" to="/Cadastro_NovaOrdemProducao" />
                     </SubMenu>
                     <SubMenu title="Consulta" isOpen={openSubMenus.includes('Consulta')} toggleSubMenu={toggleSubMenu}>
-                        <MenuItem title="Ordens de Produção" to="/EmConstrucao" />
-                        <MenuItem title="Vendas Efetuadas" to="/EmConstrucao" />
+                        <MenuItem title="Ordens de Produção" to="/Consulta_OrdensDeProducao" />
+                        <MenuItem title="Vendas Efetuadas" to="/Consulta_VendasEfetuadas" />
                     </SubMenu>
                 </SubMenu>
             </SubMenu>
@@ -70,12 +70,12 @@ const Sidebar: React.FC = () => {
             <SubMenu title="Comercial" isOpen={openSubMenus.includes('Comercial')} toggleSubMenu={toggleSubMenu}>
                 <SubMenu title="Vendas" isOpen={openSubMenus.includes('Vendas')} toggleSubMenu={toggleSubMenu}>
                     <SubMenu title="Cadastro" isOpen={openSubMenus.includes('Cadastro')} toggleSubMenu={toggleSubMenu}>
-                        <MenuItem title="Novo Cliente" to="/EmConstrucao" />
-                        <MenuItem title="Nova Venda" to="/EmConstrucao" />
+                        <MenuItem title="Novo Cliente" to="/Cadastro_NovoCliente" />
+                        <MenuItem title="Nova Venda" to="/Cadastro_NovaVenda" />
                     </SubMenu>
                     <SubMenu title="Consulta" isOpen={openSubMenus.includes('Consulta')} toggleSubMenu={toggleSubMenu}>
-                        <MenuItem title="Clientes" to="/EmConstrucao" />
-                        <MenuItem title="Vendas Efetuadas" to="/EmConstrucao" />
+                        <MenuItem title="Clientes" to="/Consulta_Clientes" />
+                        <MenuItem title="Vendas Efetuadas" to="/Consulta_VendasEfetuadas" />
                     </SubMenu>
                 </SubMenu>
             </SubMenu>

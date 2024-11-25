@@ -31,12 +31,28 @@ SYS/
 │   │   │   └── SidebarConfig.tsx
 │   │   └── BaseLayout.tsx
 │   ├── pages/
+│   │   ├── Comercial/
+│   │   │   └── Vendas/
+│   │   │       ├── Cadastro_NovoCliente.tsx
+│   │   │       ├── Cadastro_NovaVenda.tsx
+│   │   │       ├── Consulta_Clientes.tsx
+│   │   │       └── Consulta_VendasEfetuadas.tsx
+│   │   ├── Dashboard/
+│   │   │   └── Dashboard.tsx
 │   │   ├── EmConstrucao/
 │   │   │   └── EmConstrucao.tsx
+│   │   ├── Engenharia/
+│   │   │   ├── Produção/
+│   │   │   │   ├── Cadastro_NovaOrdemProducao.tsx
+│   │   │   │   ├── Consulta_OrdensDeProducao.tsx
+│   │   │   │   └── Consulta_VendasEfetuadastsx
+│   │   │   └── Projetos/
+│   │   │       ├── Cadastro_NovoItem.tsx
+│   │   │       ├── Cadastro_AlimentarEstrutura.tsx
+│   │   │       └── Consulta_Estrutura.tsx
 │   │   ├── NotFound/
 │   │   │   └── NotFound.tsx
-│   │   ├── Home.tsx
-│   │   └── (outras páginas e pastas)
+│   │   └── Home.tsx
 │   ├── routes/
 │   │   ├── AppRoutes.tsx
 │   │   └── (rotas aqui)
