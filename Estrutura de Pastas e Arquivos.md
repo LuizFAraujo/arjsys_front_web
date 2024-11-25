@@ -31,6 +31,10 @@ SYS/
 │   │   │   └── SidebarConfig.tsx
 │   │   └── BaseLayout.tsx
 │   ├── pages/
+│   │   ├── EmConstrucao/
+│   │   │   └── EmConstrucao.tsx
+│   │   ├── NotFound/
+│   │   │   └── NotFound.tsx
 │   │   ├── Home.tsx
 │   │   └── (outras páginas e pastas)
 │   ├── routes/

@@ -1,29 +1,13 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 const Content: React.FC = () => {
     return (
-        <div className="flex flex-col p-4 h-full overflow-y-auto bg-gray-100 ">
-            <h1 className="text-lg font-semibold">Conteúdo</h1>
-            <hr className="mx-0 border-t border-gray-300" />
-            <RepeatedParagraphs times={20} />
+        <div className="flex flex-col p-4 h-full overflow-y-auto bg-gray-100">
+            <Outlet />
         </div>
     );
 };
 
-const Paragraph: React.FC = () => {
-    return (
-        <p className="my-2 text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac libero nec dolor lacinia dignissim bibendum varius. Mauris ac tempor tortor dignissim bibendum varius
-        </p>
-    );
-};
-
-const RepeatedParagraphs: React.FC<{ times: number }> = ({ times }) => {
-    const paragraphs = [];
-    for (let i = 0; i < times; i++) {
-        paragraphs.push(<Paragraph key={i} />);
-    }
-    return <div>{paragraphs}</div>;
-};
-
 export default Content;
+

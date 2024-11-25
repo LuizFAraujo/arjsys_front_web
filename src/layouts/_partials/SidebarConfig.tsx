@@ -24,27 +24,50 @@ const SidebarConfig: React.FC = () => {
                     <input type="checkbox" className="form-checkbox" checked={isFooterFixed} onChange={toggleFooterFixed} />
                     <span className="ml-2 text-gray-700">Rodapé Fixo</span>
                 </label>
+
+                <label className="flex items-center">
+                    <input type="checkbox" className="form-checkbox" checked={true} />
+                    <span className="ml-2 text-gray-700">Outras Configurações</span>
+                </label>
+
+                <label className="flex items-center">
+                    <input type="checkbox" className="form-checkbox" checked={false} />
+                    <span className="ml-2 text-gray-700">Outras Configurações</span>
+                </label>
+
+                <label className="flex items-center">
+                    <input type="checkbox" className="form-checkbox" checked={true} />
+                    <span className="ml-2 text-gray-700">Outras Configurações</span>
+                </label>
+
+                <label className="flex items-center">
+                    <input type="checkbox" className="form-checkbox" checked={false} />
+                    <span className="ml-2 text-gray-700">Outras Configurações</span>
+                </label>
+
+
+
             </div>
 
-            <RepeatedParagraphs times={20} />
+            {/* <RepeatedParagraphs times={20} /> */}
         </div>
     );
 };
 
 export default SidebarConfig;
 
-const Paragraph: React.FC = () => {
-    return (
-        <p className="my-2 text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac libero nec dolor lacinia dignissim bibendum varius. Mauris ac tempor tortor dignissim bibendum varius
-        </p>
-    );
-};
+// const Paragraph: React.FC = () => {
+//     return (
+//         <p className="my-2 text-gray-700">
+//             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac libero nec dolor lacinia dignissim bibendum varius. Mauris ac tempor tortor dignissim bibendum varius
+//         </p>
+//     );
+// };
 
-const RepeatedParagraphs: React.FC<{ times: number }> = ({ times }) => {
-    const paragraphs = [];
-    for (let i = 0; i < times; i++) {
-        paragraphs.push(<Paragraph key={i} />);
-    }
-    return <div>{paragraphs}</div>;
-};
+// const RepeatedParagraphs: React.FC<{ times: number }> = ({ times }) => {
+//     const paragraphs = [];
+//     for (let i = 0; i < times; i++) {
+//         paragraphs.push(<Paragraph key={i} />);
+//     }
+//     return <div>{paragraphs}</div>;
+// };

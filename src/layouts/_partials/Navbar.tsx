@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCog } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import { useSidebar } from '../../hooks/useSidebarContext';
 import { useSidebarConfig } from '../../hooks/useSidebarConfigContext';
 
@@ -11,7 +12,7 @@ const Navbar: React.FC = () => {
     return (
         <div className="flex items-center justify-between p-4 h-full bg-custom-blue-1">
             <IconButton icon={<FontAwesomeIcon icon={faBars} />} onClick={toggleSidebar} />
-            <h1 className="text-white text-lg font-bold">ArjSys</h1>
+            <Link to="/" className="text-white text-lg font-bold">ArjSys</Link>
             <IconButton icon={<FontAwesomeIcon icon={faCog} />} onClick={toggleSidebarConfig} />
         </div>
     );
