@@ -1,4 +1,6 @@
-module.exports = {
+import type { Config } from 'tailwindcss';  // Importa o tipo Config do Tailwind
+
+const config: Config = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -10,3 +12,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+export default config;  // Exporta a configuração como ESM
